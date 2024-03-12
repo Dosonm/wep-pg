@@ -1,0 +1,36 @@
+promise chaining 파일 코드 일부분
+
+const {id} = users[0]는 구조 분해 할당(Destructuring Assignment)을 사용하여 users 배열의 첫 번째 요소에서 id 속성을 추출하는 것을 나타냅니다.
+
+구조 분해 할당은 객체나 배열에서 속성이나 요소를 추출하여 변수에 할당하는 기능입니다. 
+{} 안에 추출하고자 하는 속성의 이름을 넣으면 해당 속성을 변수로 분해하여 할당할 수 있습니다.
+
+위의 코드에서 users는 fetch 함수로부터 받아온 사용자 데이터를 담고 있는 배열입니다. users[0]는 이 배열의 첫 번째 요소를 나타내며, 
+이 요소는 사용자 정보를 포함하는 객체입니다. {id}는 이 객체에서 id 속성을 추출하여 새로운 변수 id에 할당하는 것을 의미합니다.
+
+따라서 const {id} = users[0]는 users 배열의 첫 번째 요소에서 id 속성을 추출하여 id 변수에 할당하는 것을 나타냅니다. 
+결과적으로 id 변수에는 첫 번째 사용자의 ID 값이 할당됩니다.
+
+// 1. Destructuring 문법을 사용해서 title, artist, year, medium 변수에 myBestArt 객체의 각 프로퍼티를 할당해 주세요
+const myBestArt = {
+	title: '별이 빛나는 밤에',
+	artist: '빈센트 반 고흐',
+	year: 1889,
+	medium: '유화',
+};
+
+const {title,artist,year,medium} = myBestArt;
+
+// 2. Destructuring 문법을 활용해서 myBestSong의 프로퍼티 중 title과 artist는 각각 songName과 singer라는 변수에, 나머지는 rest라는 변수에 객체로 할당해 주세요
+const myBestSong = {
+	title: '무릎',
+	artist: '아이유(IU)',
+	release: '2015.10.23.',
+	lyrics: '모두 잠드는 밤에...'
+};
+
+const {title: songName, artist: singer, ...rest} = myBestSong;
+
+
+
+
